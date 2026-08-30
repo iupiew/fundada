@@ -1,0 +1,11 @@
+name = "fundada/fundada"
+version = "0.1.0"
+compiler = "v1.1.16"
+plutus = "v3"
+license = "Apache-2.0"
+description = "All-or-nothing crowdfunding validator for the Fundada dApp"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "v3.1.0"
+source = "github"

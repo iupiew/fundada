@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn-svelte/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* fundada brand accent — emerald on black */
+@theme {
+	--color-accent: #10b981;
+	--color-accent-deep: #059669;
+	--color-accent-soft: #022c22;
+	--color-accent-light: #34d399;
+
+	--font-heading: "Ubuntu Mono", monospace;
+
+	/* hides the header search bar when browser zoom exceeds ~110% on a 1366px screen */
+	--breakpoint-search: 1240px;
+}
+
+@theme inline {
+	--font-sans: 'Ubuntu Mono', monospace;
+	--color-sidebar-ring: var(--sidebar-ring);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar: var(--sidebar);
+	--color-chart-5: var(--chart-5);
+	--color-chart-4: var(--chart-4);
+	--color-chart-3: var(--chart-3);
+	--color-chart-2: var(--chart-2);
+	--color-chart-1: var(--chart-1);
+	--color-ring: var(--ring);
+	--color-input: var(--input);
+	--color-border: var(--border);
+	--color-destructive: var(--destructive);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-muted: var(--muted);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-secondary: var(--secondary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-primary: var(--primary);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-popover: var(--popover);
+	--color-card-foreground: var(--card-foreground);
+	--color-card: var(--card);
+	--color-foreground: var(--foreground);
+	--color-background: var(--background);
+	--radius-sm: calc(var(--radius) * 0.6);
+	--radius-md: calc(var(--radius) * 0.8);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) * 1.4);
+	--radius-2xl: calc(var(--radius) * 1.8);
+	--radius-3xl: calc(var(--radius) * 2.2);
+	--radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+	/* fundada — black + emerald accent */
+	--background: #000000;
+	--foreground: #eaeaea;
+	--card: #0a0a0a;
+	--card-foreground: #e2e8f0;
+	--popover: #0a0a0a;
+	--popover-foreground: #e2e8f0;
+	--primary: #10b981; /* emerald-500 — primary CTA, progress fill, funded badge */
+	--primary-foreground: #020617; /* slate-950 text on accent surfaces */
+	--secondary: #ffffff; /* white — secondary button bg */
+	--secondary-foreground: #000000; /* black — secondary button text */
+	--muted: #18181b; /* zinc-900 */
+	--muted-foreground: #a1a1aa; /* zinc-400 — neutral muted text */
+	--accent: #18181b; /* zinc-900 — tinted hover/selected surfaces */
+	--accent-foreground: #a1a1aa; /* zinc-400 */
+	--destructive: oklch(0.704 0.191 22.216); /* red-400-ish for dark bg */
+	--border: #27272a; /* zinc-800 — neutral border */
+	--input: #27272a; /* zinc-800 — input outlines */
+	--ring: #10b981;
+	--chart-1: #10b981;
+	--chart-2: #059669;
+	--chart-3: #34d399;
+	--chart-4: #6ee7b7;
+	--chart-5: #a7f3d0;
+	--radius: 0.625rem;
+	--sidebar: #0a0a0a;
+	--sidebar-foreground: #e2e8f0;
+	--sidebar-primary: #10b981;
+	--sidebar-primary-foreground: #020617;
+	--sidebar-accent: #18181b;
+	--sidebar-accent-foreground: #a1a1aa;
+	--sidebar-border: #27272a;
+	--sidebar-ring: #10b981;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans antialiased;
+    }
+}
+

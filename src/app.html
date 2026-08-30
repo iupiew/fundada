@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="preload"
+			as="style"
+		 href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+			 href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+			/>
+		</noscript>
+		<style>
+			:root {
+				--sk-bg: #000000;
+				--sk-fg: #ffffff;
+				--sk-mono: "Ubuntu Mono", ui-monospace, "SF Mono", "Cascadia Code",
+					"DejaVu Sans Mono", "Liberation Mono", monospace;
+			}
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				background: var(--sk-bg);
+				color: var(--sk-fg);
+				font-family: var(--sk-mono);
+				min-height: 100vh;
+			}
+			#sk-skeleton {
+				display: flex;
+				min-height: 100vh;
+				align-items: center;
+				justify-content: center;
+				background: var(--sk-bg);
+			}
+			#sk-skeleton .sk-loader-logo {
+				height: 1.5rem;
+				width: auto;
+				animation: sk-pulse 1.5s ease-in-out infinite;
+			}
+			@keyframes sk-pulse {
+				0%,
+				100% {
+					opacity: 0.3;
+				}
+				50% {
+					opacity: 1;
+				}
+			}
+		</style>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div id="sk-skeleton">
+			<img class="sk-loader-logo" src="/fundada-white.svg" alt="fundada" />
+		</div>
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
